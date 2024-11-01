@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <div id="top">
+            <h1>Company Name</h1>
+            <div class="search">
+                <form method="post" action="http://all-free-download.com/free-website-templates/">
+                    <p>
+                        <input type="text" name="search" value="demo only" class="search" />
+                        <input type="submit" value="Search" class="searchSubmit" />
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div id="navcontainer">
+            <ul id="navlist">
+                <li id="active"><a href="http://all-free-download.com/free-website-templates/" id="current">Item one</a></li>
+                <li><a href="http://all-free-download.com/free-website-templates/">Item two</a></li>
+                <li><a href="http://all-free-download.com/free-website-templates/">Item three</a></li>
+                <li><a href="http://all-free-download.com/free-website-templates/">Item four</a></li>
+                <li><a href="http://all-free-download.com/free-website-templates/">Item five</a></li>
+            </ul>
+        </div>
+        <div id="leftnav">
+
+
+            @Html.Action("Chude", "BookStore")
+            
+            @Html.Action("Nhaxuatban", "BookStore")
+            <p class="quote">Happiness is a journey, not a destination.</p>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+        <div id="footer">
+            <p><a href="http://all-free-download.com/free-website-templates/">homepage</a> | <a href="http://all-free-download.com/free-website-templates/">contact</a> | &copy; 2007 Anyone | Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a> | Licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a></p>
+        </div>
+    </div>
+    <div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>
+</body>
+</html>
