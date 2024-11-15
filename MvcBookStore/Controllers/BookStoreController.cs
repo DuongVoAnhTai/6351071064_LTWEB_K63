@@ -1,4 +1,5 @@
 ﻿using MvcBookStore.Models.Entities;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,13 @@ namespace MvcBookStore.Controllers
     {
         QLBANSACHEntities data = new QLBANSACHEntities();
         // GET: BookStore
-        public ActionResult Index()
+        public ActionResult Index(int ? page)
         {
-            var sachmoi = Laysachmoi(5);
-            return View(sachmoi);
+            int pageSize = 3;
+            int pageNum = (page ?? 1);
+
+            var sachmoi = Laysachmoi(15);
+            return View(sachmoi.ToPagedList(pageNum, pageSize));
         }
 
         private List<SACH> Laysachmoi(int count)
